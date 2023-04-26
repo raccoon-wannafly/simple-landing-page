@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonfire 🔥</title>
+    <!-- <script src=".\main.js" defer></script> -->
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="bonfire.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-head">
+          <a href="#">Bonfire</a>
+        </div>
+
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section first">
+        <div class="landing"></div>
+        <div class="landing-text">
+          <h2>Welcome to Bonfire!</h2>
+          <p>A tool that will help you to cook your own dream project</p>
+          <a href="#">
+            <button>Learn more</button>
+          </a>
+        </div>
+      </section>
+
+      <section class="section second">
+      </section>
+    </main>
+    <footer class="footer-basic">
+      <div class="social">
+        <a href="#"><i class="social-blah"></i></a>
+        <a href="#"><i class="social-blah"></i></a>
+        <a href="#"><i class="social-blah"></i></a>
+        <a href="#"><i class="social-blah"></i></a>
+      </div>
+      <ul class="footer-list">
+        <li class="footer-list-item">
+            <a href="#">Home</a>
+        </li>
+        <li class="footer-list-item">
+            <a href="#">About</a>
+        </li>
+        <li class="footer-list-item">
+            <a href="#">Term</a>
+        </li>
+        <li class="footer-list-item">
+            <a href="#">Privacy</a>
+        </li>
+      </ul>
+      <p class="copyright">racoonwannafly © 2018</p>
+    </footer>
+    <script>
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  color: black;
+}
+
+.navbar {
+  height: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(33,3,79);
+}
+
+.navbar-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 5px;
+}
+
+.navbar-head a{
+    padding: 1px 2px;
+    background-color: #5f27cd;
+    border-radius: 3px;
+    margin: 5px 3px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color:white;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar-head::before {
+    content: url('fire.svg');
+    width: 20px;
+    height: 20px;
+    margin-bottom: 3px;
+    background: none;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display:flex;
+    font-size: 10px;
+}
+
+.navbar-links ul li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    padding: 0.2rem 0.7rem;
+    display: block;
+    color: white;
+    transition: all 0.05s ease-in-out,
+}
+
+.navbar-links li a:hover {
+    background-color: #5f27cd;
+    border-radius: 3px;
+}
+
+.navbar-links li a:after {
+    content: '';
+    display: block;
+    margin-top: 2px;
+    border-bottom: 1px solid #00a8ff;
+    transform: scale(.3);
+    transition: all .25s ease-in-out;
+}
+
+.navbar-links li a:hover::after {
+    transform: scale(1);
+}
+
+.toggle-button {
+    position: absolute;
+    top: .5rem;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 70%;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.section.first {
+    margin: 0;
+    height: 400px;
+    background-image: url('https://i.pinimg.com/originals/68/30/30/68303024d2caeb1c216be77b175da9b6.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section.first h2 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    text-shadow: 0 0 10px #FFFFFF;
+}
+
+.landing-text {
+    padding-top: 60px;
+}
+
+.landing-text p, .landing-text a{
+    font-size: 1.5rem;
+    margin: 30px 15px 5px;
+    color: white;
+    max-width: 40%;
+}
+
+
+
+.landing-text button {
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.15s ease-in-out;
+    height: 22px;
+    font-size: .6rem;
+    color: white;
+    background: #54a0ff;
+    border: none;
+    border-radius: 3px;
+}
+
+.landing-text button:hover{
+    color: black;
+    background: white;
+    height: 25px;
+}
+
+@media (max-width: 400px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        height: 0;
+        overflow: hidden;
+        background-color: transparent;
+        width: 100%;
+        transform: translateY(-2em);
+        transition: all .1s ease-in-out 0s;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-2em);
+        transition: all 1s ease-in-out 0s,
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-links.active, .navbar-links.active ul {
+        height: 115px;
+        transform: translateY(0%);
+        background-color: rgb(33,3,79);
+    }
+
+    .navbar-links.active li:hover {
+        background-color: #5f27cd;
+    }
+}
+
+.footer-basic {
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list {
+    flex-grow: .4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list-item {
+    list-style: none;
+}
+
+.footer-list-item a {
+    text-decoration: none;
+    color: white;
+}
